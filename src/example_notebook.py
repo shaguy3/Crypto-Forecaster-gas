@@ -6,7 +6,6 @@ import gresearch_crypto
 
 env = gresearch_crypto.make_env()
 
-
 class gresearch_guada():
     """docstring for gresearch_guada"""
     def __init__(self):
