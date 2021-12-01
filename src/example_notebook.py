@@ -12,13 +12,13 @@ class gresearch_guada():
     def __init__(self):
         #super(gresearch_guada, self).__init__()
         ### 训练集
-        self.train = '/kaggle/input/g-research-crypto-forecasting/train.csv'
+        self.train = '/home/ec2-user/Crypto-Forecaster-gas/data/train.csv'
         ### 补充训练数据集——（验证集）
-        self.supplemental_train = '/kaggle/input/g-research-crypto-forecasting/supplemental_train.csv'
+        self.supplemental_train = '/home/ec2-user/Crypto-Forecaster-gas/data/supplemental_train.csv'
         ### 资产信息数据集，包含14个虚拟货币资产
-        self.asset_details = '/kaggle/input/g-research-crypto-forecasting/asset_details.csv'
+        self.asset_details = '/home/ec2-user/Crypto-Forecaster-gas/data/asset_details.csv'
         ### 测试数据样例
-        self.example_test = '/kaggle/input/g-research-crypto-forecasting/example_test.csv'
+        self.example_test = '/home/ec2-user/Crypto-Forecaster-gas/data/example_test.csv'
         self.iter_test = env.iter_test()
 
     def dataReader(self, datasetName):
