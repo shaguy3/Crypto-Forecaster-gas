@@ -1,4 +1,14 @@
+properties(
+    [
+        pipelineTriggers(
+            [githubPush()]
+        )
+    ]
+)
+
 node {
+    git url: 'https://github.com/someone/something.git', branch: 'master'
+    
     stage('Git pull') {
         dir('/home/ec2-user/Crypto-Forecaster-gas') {
             sh('git pull')
