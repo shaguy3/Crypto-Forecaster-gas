@@ -210,4 +210,5 @@ def main():
                                                     ', ETH', f"{np.corrcoef(y_pred_lr_both[:,1], y_eth_test)[0,1]:.2f}")
 
 if __name__ == "__main__":
+    logging.debug("Got to the first line in the code after the imports")
     main()
