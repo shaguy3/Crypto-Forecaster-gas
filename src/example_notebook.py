@@ -9,8 +9,20 @@ import time
 import scipy.stats as stats
 from sklearn.preprocessing import StandardScaler
 from sklearn.multioutput import MultiOutputRegressor
+import logging
+
+def set_up_logger():
+    logging.basicConfig(
+        level="DEBUG",
+        handlers=[
+            logging.StreamHandler()
+        ],
+        format='[%(levelname)s]: %(message)s'
+    )
 
 def main():
+    logging.debug("Got to the start of main!!")
+
     data_folder = "/home/ec2-user/Crypto-Forecaster-gas/data/"
     crypto_df = pd.read_csv(data_folder + 'train.csv')
     asset_details = pd.read_csv(data_folder + 'asset_details.csv')
@@ -27,6 +39,8 @@ def main():
     print(eth.isna().sum())
 
     print(btc.head())
+
+    logging.debug("Should have something printed by here")
 
     beg_btc = btc.index[0].astype('datetime64[s]')
     end_btc = btc.index[-1].astype('datetime64[s]')
